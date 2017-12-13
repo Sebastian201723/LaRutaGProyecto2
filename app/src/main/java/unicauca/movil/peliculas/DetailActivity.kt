@@ -34,12 +34,14 @@ class DetailActivity : AppCompatActivity(), Callback {
         binding.pelicula = pelicula
 
         collapsing.title = pelicula.nombre
+        //Con picassso implementamos la img de detailactivity
         Picasso.with(this)
                 .load(Uri.parse(pelicula.imagen))
                 .into(img, this)
 
     }
-
+    //Necesitamos obtener los colores de la imagen
+    //A partir de una imagen se pueden distinguir 6 colores.
     override fun onSuccess() {
         val drawable = img.drawable as BitmapDrawable
         val palette = Palette.from(drawable.bitmap).generate()
