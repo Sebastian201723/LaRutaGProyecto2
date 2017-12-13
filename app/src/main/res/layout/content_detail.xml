@@ -63,8 +63,8 @@
                     app:layout_constraintBottom_toBottomOf="@+id/iconTime"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/iconTime"
-                    tools:text="Duracion"
-                    android:text="@{pelicula.duracion}"
+                    tools:text="Fecga"
+                    android:text="@{pelicula.fecha}"
                     />
 
                 <TextView
@@ -77,8 +77,8 @@
                     app:layout_constraintBottom_toBottomOf="@+id/iconDate"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/iconDate"
-                    tools:text="Fecha"
-                    android:text="@{pelicula.estreno}"
+                    tools:text="Precio"
+                    android:text="@{pelicula.precio}"
                     />
             </android.support.constraint.ConstraintLayout>
 

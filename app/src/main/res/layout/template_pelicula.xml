@@ -72,7 +72,7 @@
                     tools:text="Nombre" />
 
                 <ImageView
-                    android:visibility="@{ movie.estreno == null ? View.GONE : View.VISIBLE}"
+
                     android:id="@+id/iconDate"
                     android:layout_width="@dimen/icon"
                     android:layout_height="@dimen/icon"
@@ -83,18 +83,17 @@
                     app:srcCompat="@drawable/ic_today" />
 
                 <TextView
-                    android:visibility="@{ movie.estreno == null ? View.GONE : View.VISIBLE}"
                     android:id="@+id/date"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
-                    android:text="@{movie.estreno}"
+                    android:text="@{movie.fecha}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     app:layout_constraintBottom_toBottomOf="@+id/iconDate"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/iconDate"
-                    tools:text="Fecha de estreno" />
+                    tools:text="Fecha de Viaje" />
 
                 <ImageView
                     android:id="@+id/iconTime"
@@ -114,12 +113,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
-                    android:text="@{movie.duracion}"
+                    android:text="@{movie.precio}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     app:layout_constraintBottom_toBottomOf="@+id/iconTime"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/iconTime"
-                    tools:text="Duracion" />
+                    tools:text="Precio" />
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>
     </android.support.constraint.ConstraintLayout>

@@ -30,7 +30,7 @@ class DetailActivity : AppCompatActivity(), Callback {
         setSupportActionBar(toolbar)
 
         val pos = intent.extras.getInt("pos", 0)
-        val pelicula = Data.peliculas[pos]
+        val pelicula = Data.Pelicula[pos]
         binding.pelicula = pelicula
 
         collapsing.title = pelicula.nombre

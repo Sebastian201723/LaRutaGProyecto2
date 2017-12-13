@@ -30,7 +30,7 @@ class MainFragment : Fragment() {
         super.onResume()
         list.adapter = adapter
         list.layoutManager = LinearLayoutManager(activity)
-        adapter.data = Data.peliculas
+        adapter.data = Data.Pelicula
     }
 
     fun movieSelected(pos:Int){

@@ -2,27 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/nav_home"
-        android:title="@string/home"/>
-    <item android:id="@+id/nav_action"
-        android:title="@string/action"
-        android:icon="@drawable/ic_action"/>
-    <item android:id="@+id/nav_comedy"
-        android:title="@string/comedy"
-        android:icon="@drawable/ic_comedy"/>
-    <item android:id="@+id/nav_fantasy"
-        android:title="@string/fantasy"
-        android:icon="@drawable/ic_fantasy"/>
-    <item android:id="@+id/nav_horror"
-        android:title="@string/horror"
-        android:icon="@drawable/ic_horror"/>
-    <item android:id="@+id/nav_adventure"
-        android:title="@string/adventure"
-        android:icon="@drawable/ic_adventure"/>
+        android:title="@string/home"
+        android:icon="@drawable/ic_home2"
+        />
+    <item android:id="@+id/nav_fav"
+        android:title="@string/favorite"
+        android:icon="@drawable/ic_favorite"/>
+    <item android:id="@+id/nav_info"
+        android:title="@string/title"
+        android:icon="@drawable/ic_favorite"/>
 
     <item android:title="@string/profile">
         <menu>
+            <item android:id="@+id/nav_perfil"
+                  android:title="@string/perfil"
+                  android:icon="@drawable/ic_perfil"/>
             <item android:id="@+id/nav_logut"
-                android:title="@string/logut"/>
+                  android:title="@string/logut"
+                  android:icon="@drawable/ic_closesession"/>
         </menu>
     </item>
 

@@ -9,6 +9,7 @@ import unicauca.movil.peliculas.databinding.TemplatePeliculaBinding
 import unicauca.movil.peliculas.models.Pelicula
 import unicauca.movil.peliculas.util.inflate
 
+//Usamos el callback para cada vez que le demos click en una tarjeta en activity
 class PeliculaAdapter(val callback:(pos:Int)->Unit) : RecyclerView.Adapter<PeliculaViewHolder>() {
 
     var data: List<Pelicula> = emptyList()
@@ -19,10 +20,11 @@ class PeliculaAdapter(val callback:(pos:Int)->Unit) : RecyclerView.Adapter<Pelic
 
     override fun onBindViewHolder(holder: PeliculaViewHolder, position: Int) {
         holder.binding.movie = data[position]
+        //Cada view puede tener información por medio de un obj
         holder.binding.root.tag = position
         holder.binding.handler = this
     }
-
+    //Le mando la pos del tag por medio del callback
     fun onMovieClick(pos:Int){
         callback(pos)
     }

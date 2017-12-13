@@ -1,11 +1,16 @@
 <resources>
     <string name="app_name">Peliculas</string>
 
-    <string name="title">Estrenos</string>
+    <string name="title">LaRutaG</string>
     <string name="signin">Registrate</string>
     <string name="email">Email</string>
     <string name="pass">Password</string>
     <string name="description">Descripcion</string>
+
+    <string name="info">Information</string>
+    <string name="perfil">Perfil</string>
+    <string name="favorite">Favoritos</string>
+
     <string name="comedy">Comedia</string>
     <string name="action">Accion</string>
     <string name="horror">Terror</string>
