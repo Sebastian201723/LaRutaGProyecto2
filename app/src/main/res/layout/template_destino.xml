@@ -10,7 +10,7 @@
 
         <variable
             name="handler"
-            type="unicauca.movil.peliculas.adapters.PeliculaAdapter"/>
+            type="unicauca.movil.peliculas.adapters.DestinoAdapter"/>
     </data>
 
     <android.support.constraint.ConstraintLayout

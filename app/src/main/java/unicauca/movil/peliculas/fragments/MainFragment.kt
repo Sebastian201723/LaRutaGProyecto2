@@ -12,13 +12,13 @@ import org.jetbrains.anko.support.v4.startActivity
 import unicauca.movil.peliculas.DetailActivity
 
 import unicauca.movil.peliculas.R
-import unicauca.movil.peliculas.adapters.PeliculaAdapter
+import unicauca.movil.peliculas.adapters.DestinoAdapter
 import unicauca.movil.peliculas.util.Data
 
 
 class MainFragment : Fragment() {
 
-    val adapter:PeliculaAdapter = PeliculaAdapter(this::movieSelected)
+    val adapter:DestinoAdapter = DestinoAdapter(this::movieSelected)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
