@@ -6,13 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import unicauca.movil.peliculas.R
 import unicauca.movil.peliculas.databinding.TemplatePeliculaBinding
-import unicauca.movil.peliculas.models.Pelicula
+import unicauca.movil.peliculas.models.Destino
 import unicauca.movil.peliculas.util.inflate
 
 //Usamos el callback para cada vez que le demos click en una tarjeta en activity
 class PeliculaAdapter(val callback:(pos:Int)->Unit) : RecyclerView.Adapter<PeliculaViewHolder>() {
 
-    var data: List<Pelicula> = emptyList()
+    var data: List<Destino> = emptyList()
         set(value) {
             field = value
             notifyDataSetChanged()

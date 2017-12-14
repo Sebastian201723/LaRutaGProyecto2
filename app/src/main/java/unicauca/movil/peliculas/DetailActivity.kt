@@ -1,18 +1,14 @@
 package unicauca.movil.peliculas
 
-import android.content.Context
 import android.databinding.DataBindingUtil
 import android.graphics.Color
 import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.support.v7.graphics.Palette
-import android.view.Window
-import android.view.WindowManager
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detail.*
@@ -30,13 +26,13 @@ class DetailActivity : AppCompatActivity(), Callback {
         setSupportActionBar(toolbar)
 
         val pos = intent.extras.getInt("pos", 0)
-        val pelicula = Data.Pelicula[pos]
-        binding.pelicula = pelicula
+        val destino = Data.Destino[pos]
+        binding.destino = destino
 
-        collapsing.title = pelicula.nombre
+        collapsing.title = destino.nombre
         //Con picassso implementamos la img de detailactivity
         Picasso.with(this)
-                .load(Uri.parse(pelicula.imagen))
+                .load(Uri.parse(destino.imagen))
                 .into(img, this)
 
     }

@@ -1,5 +1,6 @@
 package unicauca.movil.peliculas
 
+import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.widget.DrawerLayout
@@ -8,6 +9,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.startActivity
 import unicauca.movil.peliculas.fragments.MainFragment
 
 class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener {
@@ -19,6 +21,7 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -27,7 +30,6 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener {
         nav.setNavigationItemSelectedListener { setContent(it) }
 
         putFragment(R.id.container, MainFragment.instance())
-
 
     }
 
@@ -41,7 +43,14 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener {
         drawer.closeDrawers()
         when(item?.itemId){
             R.id.nav_home -> putFragment(R.id.container, MainFragment.instance())
-            //...
+            R.id.nav_logout ->{
+                getSharedPreferences("preferences", Context.MODE_PRIVATE).edit()
+                        .putBoolean("logged",false)
+                        .apply()
+                startActivity<LoginActivity>()
+                finish()
+
+            }
         }
         return true
     }
