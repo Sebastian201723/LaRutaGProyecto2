@@ -21,8 +21,9 @@ class DetailActivity : AppCompatActivity(), Callback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //Lo asociamos al activity_detail
         binding = DataBindingUtil.setContentView(this, R.layout.activity_detail)
-
+        //Cambiamos la configuración del toolbar de cada detail
         setSupportActionBar(toolbar)
 
         val pos = intent.extras.getInt("pos", 0)
@@ -34,7 +35,13 @@ class DetailActivity : AppCompatActivity(), Callback {
         Picasso.with(this)
                 .load(Uri.parse(destino.imagen))
                 .into(img, this)
+    }
+    fun addSitio(){
 
+        /*
+        AppClient.DestinoApi.inssert(sitio).enque
+
+        * */
     }
     //Necesitamos obtener los colores de la imagen
     //A partir de una imagen se pueden distinguir 6 colores.

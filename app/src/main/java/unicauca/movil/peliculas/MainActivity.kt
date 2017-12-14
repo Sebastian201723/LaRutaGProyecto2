@@ -10,9 +10,18 @@ import android.view.MenuItem
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toast
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import unicauca.movil.peliculas.adapters.DestinoAdapter
 import unicauca.movil.peliculas.fragments.MainFragment
+import unicauca.movil.peliculas.models.Destino
+import unicauca.movil.peliculas.net.AppClient
 
-class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener {
+class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener, Callback<List<Destino>> {
+
+    //private val adapter:DestinoAdapter = DestinoAdapter(this)
 
     val toggle: ActionBarDrawerToggle by lazy {
         ActionBarDrawerToggle(this, drawer,
@@ -33,6 +42,20 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener {
 
     }
 
+    private fun loadSitios(){
+        AppClient.destinoApi.all().enqueue(this)
+    }
+    override fun onResponse(call: Call<List<Destino>>?, response: Response<List<Destino>>) {
+        if(response.isSuccessful){
+            toast("Sitio asegurado")
+         //   adapter.data = response.body()!!
+        }
+    }
+
+    override fun onFailure(call: Call<List<Destino>>?, t: Throwable?) {
+        toast("Error al mostrar destinos")
+    }
+
     fun putFragment(container: Int, fragment: Fragment) {
         supportFragmentManager.beginTransaction()
                 .replace(container, fragment)
@@ -49,7 +72,6 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener {
                         .apply()
                 startActivity<LoginActivity>()
                 finish()
-
             }
         }
         return true

@@ -44,6 +44,15 @@ dependencies {
     implementation 'com.android.support:palette-v7:27.0.2'
     implementation 'com.squareup.picasso:picasso:2.5.2'
     kapt 'com.android.databinding:compiler:3.0.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+    //which will help us make our calls reactive - using RxJava2
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    //gson converter that will handle the deserialization and serialization of the request and response bodies from & to JSON format
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    // which will help us with Android specific bindings for RxJava2.
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
 }
 repositories {
     mavenCentral()

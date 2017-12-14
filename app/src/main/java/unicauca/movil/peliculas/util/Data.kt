@@ -1,10 +1,26 @@
 package unicauca.movil.peliculas.util
 
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import unicauca.movil.peliculas.models.Destino
+import unicauca.movil.peliculas.net.AppClient
+import unicauca.movil.peliculas.net.AppClient.destinoApi
 
-object Data {
+object Data : Callback<List<Destino>> {
+    var Destino: List<Destino> = emptyList()
 
-    var Destino: MutableList<Destino> = mutableListOf(
+    fun  Destino() = AppClient.destinoApi.all().enqueue(this)
+
+    override fun onFailure(call: Call<List<Destino>>?, t: Throwable?) {
+    }
+
+    override fun onResponse(call: Call<List<Destino>>?, response: Response<List<Destino>>) {
+        if(response.isSuccessful){
+            Destino = response.body()!!
+        }
+    }
+            /*
             Destino("Hacienda cajibio", "210 min", "3",
                     "12000",
                     "https://i.ytimg.com/vi/w5DaQPVis5A/maxresdefault.jpg","sdgsfg"),
@@ -17,6 +33,8 @@ object Data {
             Destino("Canopy Ardilla", "210 min", "3",
                     "12000",
                     "http://www.tuciudadenred.com/data/foto/gr_1467916411_1004209900.jpg","sfg")
+
     )
+     */
 
 }

@@ -14,10 +14,18 @@ import unicauca.movil.peliculas.DetailActivity
 import unicauca.movil.peliculas.R
 import unicauca.movil.peliculas.adapters.DestinoAdapter
 import unicauca.movil.peliculas.util.Data
-
+/*
+* El Fragment como unidad independiente, tomará los datos de cada destino en forma de
+* ViewHolders y los  mostrará en una pantalla en forma de lista. El layoutManager
+* le ayudará a realizar opciones de transacción.
+* El adaptador tendrá la plantilla de template_destino y se le cargará con los datos
+* que tenga unicauca.movil.peliculas.util.Data
+* */
 
 class MainFragment : Fragment() {
 
+    //Cuando la persona hace click en un container, seguarda posición. Adicionalmente
+    //La podemos enviar como parámetro
     val adapter:DestinoAdapter = DestinoAdapter(this::movieSelected)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -31,7 +39,7 @@ class MainFragment : Fragment() {
         list.layoutManager = LinearLayoutManager(activity)
         adapter.data = Data.Destino
     }
-
+    //En el momento en que se haga click, enviar como param la pos
     fun movieSelected(pos:Int){
         startActivity<DetailActivity>("pos" to pos)
     }
