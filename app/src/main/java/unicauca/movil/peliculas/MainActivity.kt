@@ -66,6 +66,7 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener, Callback<
         drawer.closeDrawers()
         when(item?.itemId){
             R.id.nav_home -> putFragment(R.id.container, MainFragment.instance())
+            R.id.nav_info -> startActivity<ManualActivity>()
             R.id.nav_logout ->{
                 getSharedPreferences("preferences", Context.MODE_PRIVATE).edit()
                         .putBoolean("logged",false)

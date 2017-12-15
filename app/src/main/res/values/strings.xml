@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Peliculas</string>
+    <string name="app_name">LaRutaG</string>
 
     <string name="title">LaRutaG</string>
     <string name="signin">Registrate</string>
@@ -21,4 +21,14 @@
     <string name="namehint">Nombre</string>
     <string name="usernamehint">Username</string>
     <string name="age">Edad</string>
+    <string name="info2">Manual</string>
+    <string name="book">Reservas</string>
+
+    <string name="Introduccion">Es una aplicación que permite conocer destinos aledaños y ecoturísticos que pueden visitarse cerca de la ciudad de Popayán. Entre estos podemos encontrar las siguientes funciones: "</string>
+    <string name="Manual1">1. Reservación de boletos a lugares turísticos</string>
+    <string name="Manual2">2. Reserva de Tours.</string>
+    <string name="Manual3">3. Guianza del medio de transporte</string>
+    <string name="Manual3part1">Se refiere a qué bus tomar, a qué hora y ruta exacta desde la terminal de transportes ó carros particulares que puedan prestar dicho servicio.</string>
+    <string name="Manual4">Para leer acerca de las categorías, continuar:</string>
+    <string name="Categorias">Categorias</string>
 </resources>

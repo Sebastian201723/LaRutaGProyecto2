@@ -24,7 +24,10 @@
         <activity
             android:name=".DetailActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".ManualActivity" />
+        <activity android:name=".categoriaActivity" />
+        <activity android:name=".ReservasActivity"></activity>
     </application>
 
 </manifest>
