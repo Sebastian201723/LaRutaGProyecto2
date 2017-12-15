@@ -7,5 +7,5 @@
     <dimen name="medium">20dp</dimen>
     <dimen name="img_template">160dp</dimen>
     <dimen name="header">140dp</dimen>
-    <dimen name="TitleBrand">60dp</dimen>
+    <dimen name="TitleBrand">80dp</dimen>
 </resources>

@@ -4,7 +4,7 @@
     <string name="title">LaRutaG</string>
     <string name="signin">Registrate</string>
     <string name="email">Email</string>
-    <string name="pass">Password</string>
+    <string name="password1">Password</string>
     <string name="description">Descripcion</string>
 
     <string name="info">Information</string>
@@ -16,4 +16,5 @@
     <string name="logout">Cerrar Sesion</string>
     <string name="open_menu">Categorias</string>
     <string name="close_menu">Menu cerrado</string>
+    <string name="reg">Registrarse</string>
 </resources>

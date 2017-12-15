@@ -14,6 +14,7 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detail.*
 import unicauca.movil.peliculas.databinding.ActivityDetailBinding
 import unicauca.movil.peliculas.util.Data
+import unicauca.movil.peliculas. models.Destino
 
 class DetailActivity : AppCompatActivity(), Callback {
 
@@ -27,7 +28,7 @@ class DetailActivity : AppCompatActivity(), Callback {
         setSupportActionBar(toolbar)
 
         val pos = intent.extras.getInt("pos", 0)
-        val destino = Data.Destino[pos]
+        val destino = Data.destino[pos]
         binding.destino = destino
 
         collapsing.title = destino.nombre

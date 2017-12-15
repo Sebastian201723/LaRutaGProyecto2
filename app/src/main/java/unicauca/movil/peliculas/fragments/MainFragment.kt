@@ -37,7 +37,7 @@ class MainFragment : Fragment() {
         super.onResume()
         list.adapter = adapter
         list.layoutManager = LinearLayoutManager(activity)
-        adapter.data = Data.Destino
+        adapter.data = Data.destino
     }
     //En el momento en que se haga click, enviar como param la pos
     fun movieSelected(pos:Int){
