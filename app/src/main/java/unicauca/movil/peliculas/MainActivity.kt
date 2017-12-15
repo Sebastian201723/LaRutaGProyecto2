@@ -18,6 +18,7 @@ import unicauca.movil.peliculas.adapters.DestinoAdapter
 import unicauca.movil.peliculas.fragments.MainFragment
 import unicauca.movil.peliculas.models.Destino
 import unicauca.movil.peliculas.net.AppClient
+import unicauca.movil.peliculas.util.Data
 
 class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener, Callback<List<Destino>> {
 
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener, Callback<
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
+        Data.loadusers()
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         drawer.addDrawerListener(this)

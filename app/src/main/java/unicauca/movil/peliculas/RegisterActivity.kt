@@ -12,7 +12,7 @@ import org.jetbrains.anko.startActivity
 import unicauca.movil.peliculas.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {
-
+    val username = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)

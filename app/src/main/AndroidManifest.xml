@@ -27,7 +27,8 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".ManualActivity" />
         <activity android:name=".categoriaActivity" />
-        <activity android:name=".ReservasActivity"></activity>
+        <activity android:name=".ReservasActivity" />
+        <activity android:name=".fragments.ReservasFragment"></activity>
     </application>
 
 </manifest>
