@@ -5,7 +5,9 @@ import android.content.SharedPreferences
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import org.jetbrains.anko.longToast
 import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toast
 import unicauca.movil.peliculas.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -31,11 +33,13 @@ class LoginActivity : AppCompatActivity() {
     fun login(){
         preferences.edit().putBoolean("logged", true)
                 .apply()
+        longToast("¡Bienvenido a LaRutaG!")
         startActivity<MainActivity>()
         finish()
     }
 
     fun register(){
+        longToast("Cargando..")
         startActivity<RegisterActivity>()
         finish()
 
