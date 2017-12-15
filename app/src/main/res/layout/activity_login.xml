@@ -80,7 +80,7 @@
 
             <Button
                 android:id="@+id/btnRegistro"
-                android:onClick="@{()-> handler.signin()}"
+                android:onClick="@{()-> handler.register()}"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="210dp"

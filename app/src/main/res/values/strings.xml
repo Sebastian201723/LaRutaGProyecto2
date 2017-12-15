@@ -17,4 +17,8 @@
     <string name="open_menu">Categorias</string>
     <string name="close_menu">Menu cerrado</string>
     <string name="reg">Registrarse</string>
+    <string name="RegisterTitle">Registrarse</string>
+    <string name="namehint">Nombre</string>
+    <string name="usernamehint">Username</string>
+    <string name="age">Edad</string>
 </resources>

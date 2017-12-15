@@ -35,7 +35,9 @@ class LoginActivity : AppCompatActivity() {
         finish()
     }
 
-    fun signin(){
+    fun register(){
+        startActivity<RegisterActivity>()
+        finish()
 
     }
 }
